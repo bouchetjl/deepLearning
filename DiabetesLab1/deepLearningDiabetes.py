@@ -44,7 +44,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_diabetes, y_diabetes, test
 
 
 # Parameters
-training_epochs = 300
+training_epochs = 400
 batch_size = 20
 display_step = 5
 
@@ -56,9 +56,9 @@ n_classes = y_train.shape[1]
 dropout = 0.01
 
 #learning rate
-start_learning_rate=0.01
+start_learning_rate=0.00879
 decay_steps=100000
-decay_rate=1/12
+decay_rate=1/13
 global_step=tf.Variable (0, trainable=False,name="global_step")
 learning_rate = tf.train.exponential_decay(start_learning_rate, global_step, decay_steps, decay_rate)
 
